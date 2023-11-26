@@ -19,9 +19,23 @@ const createTaskGET = (req,res) => {
     res.render('createTask')
 }
 
+const modifyTaskGET = async (req,res) => {
+
+    const param_id = req.params.id
+    if(param_id){
+        await Task.destroy({where:{id:param_id}})
+        res.redirect('/')
+    }else{
+        res.send('Error con la id')
+    }
+    
+
+}
+
 export {
     mainLayer,
     createTaskGET,
-    createTaskPOST
+    createTaskPOST,
+    modifyTaskGET
 
 }

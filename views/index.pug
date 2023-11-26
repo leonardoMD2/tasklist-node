@@ -6,8 +6,13 @@ html(lang="en")
         link(rel="stylesheet", href="/css/app.css")
         link(rel="stylesheet", href="/css/utilities.css")
         title Document
-    body.bg-slate-900
+    body.bg-slate-900.grid.h-screen
         h1.text-center.text-6xl.text-slate-400.mt-10.font-mono Task List
-        section(class="w-3/4 md:min-w-400 mx-auto mt-14 border rounded-lg border-slate-700   p-4")
+        section(class="w-3/4 md:min-w-400 mx-auto mt-14 border rounded-lg border-slate-700 p-4 row-span-6")
             block loadTasks
             block createTask
+        footer(class="w-3/4 md:min-w-400 mx-auto mt-14 border rounded-lg border-slate-700 p-4 grid grid-cols-4 items-center justify-items-center self-end")
+            img(src="/img/Node.svg", alt="", srcset="" class="w-36")
+            img(src="/img/expressjs-ar21.svg", alt="", srcset="" class="w-36")
+            img(src="/img/SQLite.svg", alt="", srcset="" class="w-36")
+            img(src="/img/Tailwind.svg", alt="", srcset="" class="w-36")

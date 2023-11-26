@@ -4,6 +4,10 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/app.css")
+        link(rel="stylesheet", href="/css/utilities.css")
         title Document
-    body 
-        h1.text-center working from pug
+    body.bg-slate-900
+        h1.text-center.text-6xl.text-slate-400.mt-10 Task List
+        section(class="w-3/4 md:min-w-400 mx-auto mt-14 border rounded-lg border-slate-700  bg-blue-950  p-4")
+        block loadTasks
+        block createTask

@@ -1,0 +1,13 @@
+extends index
+
+block createTask
+    div(class="shadow p-4 py-8 ", x-data="{ images: [] }")
+    
+        h1.text-center.text-zinc-300 Load Tasks
+
+    form(method="POST" action="/create")
+      div(class="editor mx-auto w-10/12 flex flex-col text-gray-800 border rounded-lg border-slate-700 p-4 shadow-lg max-w-2xl backdrop-blur-sm")
+        textarea(class="text-slate-400 description sec p-3 h-60 border rounded-lg border-slate-700 outline-none bg-blue-950", spellcheck="false",name="descripcion", placeholder="Describe everything about this post here")
+        div(class="grid grid-cols-2 ")
+            button(class="rounded px-3 py-2 mt-1 border-b-4 border-l-2 shadow-lg bg-blue-800 border-blue-900 text-white w-20", href="/") Back
+            button(id="backButton",class="rounded px-3 py-2 mt-1 border-b-4 border-l-2 shadow-lg bg-blue-800 border-blue-900 text-white w-20 justify-self-end") Save
